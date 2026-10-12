@@ -1,0 +1,42 @@
+SMART WORK MART - ENGAGEMENT LETTER GENERATOR  (setup guide)
+=============================================================
+
+WHAT IT DOES
+  Form -> assigns the next Associate ID -> builds the 4-page PDF -> adds a row to the register -> emails the PDF from hr@smartworkmart.com
+
+WHERE CAN IT RUN?
+  * On your own PC (double-click run.bat)                       -> works straight away, nothing else needed
+  * On a server so the client gets a link (GitHub + Render)     -> see step 2 and 3
+  * NOT on Netlify. Netlify only hosts static pages / small functions; this app needs a Python server.
+  * Render's FREE plan blocks email ports, so use a paid Render plan (or another Python host that allows SMTP).
+
+STEP 1 - LIVE EXCEL FOR THE CLIENT (Google Sheets, updates by itself, no downloads)
+  1. Go to sheets.google.com, create a blank sheet named "SWM Associates Register".
+  2. Menu: Extensions > Apps Script. Delete the sample code, paste everything from google_sheet/Code.gs.
+  3. In line 6 replace CHANGE-THIS-TO-A-LONG-RANDOM-TEXT with the value of SHEET_SECRET from your .env. Save.
+  4. Click Deploy > New deployment > type "Web app":  Execute as = Me,  Who has access = Anyone.  Deploy, and allow the permissions.
+  5. Copy the "Web app URL". Put it in .env as SHEET_WEBHOOK_URL.
+  6. Copy the normal address of the Google Sheet (from the browser bar) into .env as SHEET_URL.
+  7. Press Share in the sheet and add your client's Google email (Editor or Viewer).
+  Result: every submission appears in the sheet immediately. The client just opens the sheet link.
+  Whenever they need a real Excel file: File > Download > Microsoft Excel (.xlsx).
+  If you leave SHEET_WEBHOOK_URL empty, the app keeps using the local file data/Associates_Register.xlsx instead.
+
+STEP 2 - PUT THE PROJECT ON GITHUB
+  Upload the project folder to a PRIVATE GitHub repository. Do NOT upload the ".env" file (it contains the mailbox password).
+  The "for GitHub" zip has no .env; the .gitignore also blocks it.
+
+STEP 3 - PUBLISH ON RENDER (gives the link)
+  1. render.com > New > Web Service > connect the GitHub repository (a render.yaml is included).
+  2. Choose a PAID instance type (Starter) - needed for sending email.
+  3. Under Environment, add the values from your .env: SMTP_PASSWORD, APP_PASSWORD, SHEET_WEBHOOK_URL, SHEET_SECRET, SHEET_URL.
+  4. Deploy. Send the client the link + the login (APP_USERNAME / APP_PASSWORD).
+
+TESTING
+  Submit one letter with your own email address. Check: (1) email + PDF arrive, (2) a new row appears in the register, (3) the Email Status column says "Sent".
+  If sending fails, the reason is written in the Email Status column.
+
+SAFETY
+  * The mailbox password was shared in a screenshot - change it in Hostinger once the project is live and update SMTP_PASSWORD.
+  * Keep APP_PASSWORD set; otherwise anyone with the link could send letters from hr@smartworkmart.com.
+  * Keep .env private.

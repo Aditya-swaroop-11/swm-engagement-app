@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: swm-engagement-letters
+    runtime: python
+    plan: starter            # a PAID plan is required: Render's free plan blocks outgoing email (SMTP) ports
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 120
+    envVars:
+      - {key: PYTHON_VERSION, value: "3.12.7"}
+      - {key: SENDER_EMAIL, value: hr@smartworkmart.com}
+      - {key: SENDER_NAME, value: Smart Work Mart HR}
+      - {key: SMTP_HOST, value: smtp.hostinger.com}
+      - {key: SMTP_PORT, value: "465"}
+      - {key: SMTP_SECURITY, value: ssl}
+      - {key: SMTP_USER, value: hr@smartworkmart.com}
+      - {key: SMTP_PASSWORD, sync: false}
+      - {key: APP_USERNAME, value: hr}
+      - {key: APP_PASSWORD, sync: false}
+      - {key: SHEET_WEBHOOK_URL, sync: false}
+      - {key: SHEET_SECRET, sync: false}
+      - {key: SHEET_URL, sync: false}
+      - {key: ONBOARDING_FORM_URL, value: "https://forms.gle/bvg44gZmw4HT8JyK6"}
+      - {key: ID_PREFIX, value: "SWM/TTL/2026/"}
+      - {key: ID_START, value: "21078"}
