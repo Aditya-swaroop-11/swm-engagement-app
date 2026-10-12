@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Work Mart – Engagement Letter</title>
+<style>
+:root{--y:#F9B91B;--y2:#FFD25E;--k:#0b0b0b;--k2:#1a1a1a;--ink:#1d2433;--mut:#6b7385;--line:#e6e2d3;--bg:#faf6e9;--err:#c62828;--ok:#1b8a4b}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);
+ background-image:radial-gradient(circle at 12% 0%,#fff3c4 0,transparent 38%),radial-gradient(circle at 100% 100%,#ffe7a0 0,transparent 30%);min-height:100vh}
+header{background:var(--k);border-bottom:4px solid var(--y);padding:12px 28px;display:flex;align-items:center;gap:18px}
+header .logo{background:#fff;border-radius:12px;padding:6px 12px;display:flex}
+header .logo img{height:46px;display:block}
+header h1{margin:0;color:#fff;font-size:19px;font-weight:600;letter-spacing:.2px}
+header .reg{margin-left:auto;color:#000;background:var(--y);font-weight:700;font-size:13px;text-decoration:none;padding:9px 16px;border-radius:10px;white-space:nowrap}header .reg:hover{background:var(--y2)}
+header h1 small{display:block;color:var(--y);font-size:12px;font-weight:500;letter-spacing:1.6px;text-transform:uppercase;margin-top:3px}
+main{max-width:1120px;margin:28px auto 60px;padding:0 20px;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);gap:24px;align-items:start}
+.card{background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(11,11,11,.08);border:1px solid var(--line)}
+form.card{padding:28px 30px 26px}
+.card h2{margin:0 0 4px;font-size:21px}
+.sub{color:var(--mut);font-size:14px;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:#2c3347}
+label i{color:var(--err);font-style:normal}
+.f{position:relative}
+input,select{width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1.6px solid #ddd8c6;border-radius:11px;background:#fffefb;color:var(--ink);outline:none;transition:.15s;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%230b0b0b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;cursor:pointer}
+input:hover,select:hover{border-color:#c9c19c}
+input:focus,select:focus{border-color:var(--y);box-shadow:0 0 0 4px rgba(249,185,27,.28);background:#fff}
+select:disabled{background-color:#f3f1ea;color:#a39f90;cursor:not-allowed}
+input[readonly]{background:#f7f3e2;font-weight:700;letter-spacing:.4px;color:#000;border-style:dashed}
+.pre{position:relative}.pre span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:700;color:#000}.pre input{padding-left:32px;font-weight:600}
+.f.bad input,.f.bad select{border-color:var(--err);background:#fff8f7}
+.msg{color:var(--err);font-size:12px;margin-top:5px;min-height:0;display:none}.f.bad .msg{display:block}
+.hint{font-size:12px;color:var(--mut);margin-top:5px}
+.tag{display:inline-block;background:var(--k);color:var(--y);font-size:10px;font-weight:700;letter-spacing:.8px;padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:middle}
+.actions{display:flex;gap:12px;justify-content:flex-end;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+button{font:inherit;font-weight:700;font-size:15px;border-radius:12px;padding:13px 28px;cursor:pointer;border:2px solid var(--k);transition:.15s}
+.btn-p{background:var(--k);color:var(--y)}.btn-p:hover{background:var(--y);color:#000;border-color:var(--y);transform:translateY(-1px);box-shadow:0 8px 18px rgba(249,185,27,.45)}
+.btn-s{background:#fff;color:var(--k)}.btn-s:hover{background:#f3efe0}
+button:disabled{opacity:.6;cursor:wait;transform:none;box-shadow:none}
+aside.card{background:var(--k);color:#fff;padding:24px;border-color:var(--k);position:sticky;top:20px}
+aside h3{margin:0 0 2px;color:var(--y);font-size:15px;letter-spacing:1.2px;text-transform:uppercase}
+aside .big{font-size:34px;font-weight:800;margin:6px 0 2px}.big small{font-size:13px;font-weight:500;color:#bdbdbd}
+.row{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #2b2b2b;font-size:14px}
+.row b{display:block;font-size:11px;color:var(--y);font-weight:600;margin-top:2px}
+.row .v{text-align:right;font-weight:700;white-space:nowrap}.row .v em{display:block;font-style:normal;font-weight:500;font-size:12px;color:#aaa}
+.bar{display:flex;height:9px;border-radius:9px;overflow:hidden;margin:16px 0 4px;background:#2b2b2b}
+.bar i{display:block}.b1{background:var(--y)}.b2{background:#fff}.b3{background:#8a6a10}
+.tot{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;font-weight:800}.tot span:last-child{color:var(--y);font-size:18px}
+.note{font-size:12px;color:#9a9a9a;margin-top:14px;line-height:1.5}
+.ov{position:fixed;inset:0;background:rgba(11,11,11,.62);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:20;padding:16px}
+.ov.on{display:flex}
+.modal{background:#fff;border-radius:20px;max-width:480px;width:100%;padding:30px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:pop .25s}
+@keyframes pop{from{transform:scale(.94);opacity:0}}
+.ic{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800}
+.ic.ok{background:#e6f6ec;color:var(--ok)}.ic.warn{background:#fff2d0;color:#9a6b00}
+.modal h4{margin:0 0 6px;font-size:21px}.modal p{margin:6px 0;color:#4a5164;font-size:14.5px;line-height:1.5}
+.idb{background:var(--k);color:var(--y);font-weight:800;letter-spacing:.5px;border-radius:10px;padding:10px 14px;margin:14px 0;font-size:16px}
+.mact{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}.mact button,.mact a{padding:11px 20px;font-size:14px}
+a.btn{display:inline-block;text-decoration:none;border-radius:12px;font-weight:700;border:2px solid var(--k);background:#fff;color:var(--k)}
+.spin{width:44px;height:44px;border:5px solid #eee;border-top-color:var(--y);border-radius:50%;margin:0 auto 14px;animation:r 0.8s linear infinite}@keyframes r{to{transform:rotate(360deg)}}
+@media(max-width:900px){main{grid-template-columns:1fr}aside.card{position:static;order:-1}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Smart Work Mart"></div>
+  <h1>Letter of Contractual Engagement<small>Generate &amp; send associate agreement</small></h1>
+  <a class="reg" href="/register" {% if cloud %}target="_blank" rel="noopener"{% endif %}>{{ 'Open live register' if cloud else 'Download Excel register' }}</a>
+</header>
+
+<main>
+<form class="card" id="form" novalidate autocomplete="off">
+  <h2>New Associate Engagement</h2>
+  <p class="sub">Fill in the details. The agreement PDF is created automatically, saved to the Excel register and emailed to the associate.</p>
+  <div class="grid">
+    <div class="f" id="f_first_name"><label>First Name <i>*</i></label><input name="first_name" maxlength="40" placeholder="e.g. Mayank"><div class="msg"></div></div>
+    <div class="f" id="f_last_name"><label>Last Name <i>*</i></label><input name="last_name" maxlength="40" placeholder="e.g. Kasoutiya"><div class="msg"></div></div>
+
+    <div class="f" id="f_state"><label>Address – State <i>*</i></label>
+      <select name="state"><option value="">Select state / UT</option></select><div class="msg"></div></div>
+    <div class="f" id="f_district"><label>Address – District <i>*</i></label>
+      <select name="district" disabled><option value="">Select state first</option></select><div class="msg"></div></div>
+
+    <div class="f" id="f_phone"><label>Contact No. <i>*</i></label><input name="phone" inputmode="numeric" maxlength="13" placeholder="10-digit mobile number"><div class="msg"></div></div>
+    <div class="f" id="f_email"><label>Email ID <i>*</i></label><input name="email" type="email" placeholder="associate@example.com"><div class="msg"></div></div>
+
+    <div class="f"><label>Associate ID <span class="tag">AUTO</span></label><input id="assoc" readonly value="{{ next_id }}"><div class="hint">Generated automatically and increases by 1 for every submission.</div></div>
+    <div class="f" id="f_date"><label>Date of Engagement <i>*</i></label><input name="date" type="date"><div class="msg"></div></div>
+
+    <div class="f" id="f_role"><label>Role <i>*</i></label>
+      <select name="role"><option value="">Select role</option>{% for r in roles %}<option>{{ r }}</option>{% endfor %}</select><div class="msg"></div></div>
+    <div class="f" id="f_monthly"><label>Total Gross Potential Earning (Monthly) <i>*</i></label>
+      <div class="pre"><span>₹</span><input name="monthly" inputmode="numeric" maxlength="12" placeholder="27,000"></div><div class="msg"></div></div>
+  </div>
+  <div class="actions">
+    <button type="button" class="btn-s" id="cancel">Cancel</button>
+    <button type="submit" class="btn-p" id="submit">Submit &amp; Send Letter</button>
+  </div>
+</form>
+
+<aside class="card">
+  <h3>Compensation split</h3>
+  <div class="big" id="pm">₹ 0 <small>/ month</small></div>
+  <div class="bar"><i class="b1" style="width:44.8%"></i><i class="b2" style="width:20%"></i><i class="b3" style="width:35.2%"></i></div>
+  {% for name, pct in split %}
+  <div class="row"><div>{{ name }}<b>{{ pct }}%</b></div><div class="v" data-i="{{ loop.index0 }}">₹ 0<em>₹ 0 / year</em></div></div>
+  {% endfor %}
+  <div class="tot"><span>Total (yearly)</span><span id="py">₹ 0</span></div>
+  <p class="note">Calculated automatically from the monthly gross. Yearly figures are monthly × 12 and appear in Annexure A of the letter.</p>
+</aside>
+</main>
+
+<div class="ov" id="ov"><div class="modal" id="modal"></div></div>
+
+<script>
+const $=s=>document.querySelector(s), form=$('#form');
+const PCT={{ split|map(attribute=1)|list|tojson }};
+const inr=n=>{n=Math.round(n).toString();if(n.length<=3)return n;let t=n.slice(-3),h=n.slice(0,-3);return h.replace(/\B(?=(\d{2})+(?!\d))/g,',')+','+t};
+let STATES={};
+fetch("{{ url_for('static', filename='states.json') }}").then(r=>r.json()).then(d=>{STATES=d;
+  const s=form.state;Object.keys(d).forEach(k=>s.add(new Option(k,k)))});
+form.state.addEventListener('change',()=>{const d=form.district;d.innerHTML='';
+  if(!form.state.value){d.add(new Option('Select state first',''));d.disabled=true;return}
+  d.add(new Option('Select district',''));STATES[form.state.value].forEach(x=>d.add(new Option(x,x)));d.disabled=false;d.focus()});
+const today=()=>{const d=new Date();return new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+form.date.value=today();
+form.phone.addEventListener('input',()=>form.phone.value=form.phone.value.replace(/[^\d+ ]/g,''));
+form.monthly.addEventListener('input',()=>{const n=form.monthly.value.replace(/\D/g,'');form.monthly.value=n?inr(+n):'';calc()});
+function calc(){const m=+form.monthly.value.replace(/\D/g,'')||0;let used=0;const vals=PCT.map((p,i)=>{const v=i==PCT.length-1?m-used:Math.round(m*p/100);used+=v;return v});
+  $('#pm').innerHTML='₹ '+inr(m)+' <small>/ month</small>';
+  document.querySelectorAll('.v').forEach(e=>{const v=vals[e.dataset.i];e.innerHTML='₹ '+inr(v)+'<em>₹ '+inr(v*12)+' / year</em>'});$('#py').textContent='₹ '+inr(m*12)}
+function bad(k,t){const f=$('#f_'+k);if(!f)return;f.classList.add('bad');f.querySelector('.msg').textContent=t}
+function clearErr(){document.querySelectorAll('.f.bad').forEach(f=>f.classList.remove('bad'))}
+form.addEventListener('input',e=>e.target.closest('.f')?.classList.remove('bad'));
+form.addEventListener('change',e=>e.target.closest('.f')?.classList.remove('bad'));
+function validate(){clearErr();const v=Object.fromEntries(new FormData(form));let ok=true;const e=(k,t)=>{bad(k,t);ok=false};
+  if(!/^[A-Za-z][A-Za-z .'\-]*$/.test(v.first_name.trim()))e('first_name','Enter a valid first name.');
+  if(!/^[A-Za-z][A-Za-z .'\-]*$/.test(v.last_name.trim()))e('last_name','Enter a valid last name.');
+  if(!v.state)e('state','Select a state.');else if(!v.district)e('district','Select a district.');
+  if(!/^[6-9]\d{9}$/.test(v.phone.replace(/^\+91/,'').replace(/\s/g,'')))e('phone','Enter a valid 10-digit mobile number.');
+  if(!/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(v.email.trim()))e('email','Enter a valid email address.');
+  if(!v.date)e('date','Choose the date of engagement.');
+  if(!v.role)e('role','Select a role.');
+  if(!+v.monthly.replace(/\D/g,''))e('monthly','Enter the monthly gross amount.');
+  if(!ok)document.querySelector('.f.bad input,.f.bad select')?.focus();return ok}
+function show(html){$('#modal').innerHTML=html;$('#ov').classList.add('on')}
+function hide(){$('#ov').classList.remove('on')}
+function reset(){form.reset();form.date.value=today();form.district.innerHTML='<option value="">Select state first</option>';form.district.disabled=true;clearErr();calc()}
+$('#cancel').onclick=()=>{const dirty=[...new FormData(form).entries()].some(([k,v])=>v&&k!=='date');
+  if(!dirty||confirm('Discard everything entered in this form?'))reset()};
+form.addEventListener('submit',async ev=>{ev.preventDefault();if(!validate())return;
+  const btn=$('#submit');btn.disabled=true;show('<div class="spin"></div><h4>Creating agreement…</h4><p>Building the PDF, updating Excel and sending the email.</p>');
+  try{const r=await fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
+    const d=await r.json();
+    if(!d.ok){hide();if(d.errors)Object.entries(d.errors).forEach(([k,t])=>bad(k,t));else alert(d.message||'Something went wrong.');return}
+    $('#assoc').value=d.next_id;done(d);reset()}
+  catch(e){hide();alert('Could not reach the server. Is the app still running?')}finally{btn.disabled=false}});
+function done(d){const ok=d.email_sent;
+  show(`<div class="ic ${ok?'ok':'warn'}">${ok?'✓':'!'}</div><h4>${ok?'Letter sent successfully':'Saved, but email not sent'}</h4>
+  <p><b>${d.name}</b> has been added to the Excel register.</p><div class="idb">${d.assoc_id}</div>
+  <p>${ok?'Email with the agreement PDF was sent to <b>'+d.to+'</b>.':'<b>'+d.email_status+'</b>'}</p>
+  ${d.excel_updated?'':'<p style="color:#c62828">Excel status column could not be updated (file open?).</p>'}
+  <div class="mact"><a class="btn" href="/download/${encodeURIComponent(d.pdf)}">Download PDF</a>
+  ${ok?'':'<button class="btn-s" id="rs" data-id="'+d.assoc_id+'">Retry email</button>'}
+  <button class="btn-p" onclick="hide()">New entry</button></div>`);
+  const rs=$('#rs');if(rs)rs.onclick=async()=>{rs.disabled=true;rs.textContent='Sending…';
+    const r=await(await fetch('/api/resend',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({assoc_id:rs.dataset.id})})).json();
+    d.email_sent=r.email_sent;d.email_status=r.email_status;done(d)}}
+calc();
+</script>
+</body>
+</html>
