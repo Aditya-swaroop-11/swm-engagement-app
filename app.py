@@ -81,8 +81,9 @@ def submit():
     rows, _, _ = split_compensation(a["monthly"])
     try:
         assoc_id, pdf_path = X.add_record({**a, "rows": rows, "engagement_type": C.ENGAGEMENT_TYPE}, build_pdf)
-    except PermissionError:
-        return jsonify(ok=False, message="The Excel register is open in another program. Close Associates_Register.xlsx and press Submit again."), 409
+    except PermissionError as ex:
+        app.logger.exception("permission error while saving")
+        return jsonify(ok=False, message=f"Permission error while saving: {ex}. (If you run on your own PC, make sure Associates_Register.xlsx is not open in Excel.)"), 409
     except sheet_cloud.CloudError as ex:
         return jsonify(ok=False, message=str(ex)), 502
     except Exception as ex:                                     # noqa: BLE001
